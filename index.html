@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Click Event -->
+    <button id="btn">Click Me</button>
+
+    <!-- Mouse Events -->
+    <div id="box">Move your mouse here</div>
+
+    <!-- Keyboard Event -->
+     <input type="text" name="" id="name">
+
+
+    <!-- Input Event -->
+    <input type="text" id="username">
+
+    <!-- Change Event -->
+     <select name="" id="city">
+        <option value="">Dhaka</option>
+        <option value="">Chattogram</option>
+     </select>
+
+     <!-- Submit Event -->
+      <from id="myForm">
+        <input type="text">
+        <button>Submit</button>
+      </from>
+
+    <script>
+        const button = document.getElementById("btn");
+        button.addEventListener("click", function () {
+            alert("Button was clicked!");
+        })
+
+        // Mouse event 
+        const box = document.getElementById("box"); 
+        box.addEventListener("mouseenter", function() {
+            box.style.background = "green"; 
+        }); 
+
+        // Keyboard event 
+        const input = document.getElementById("name"); 
+        input.addEventListener("keydown", function(event) {
+            console.log(event.key); 
+        }); 
+
+        // Input Event 
+        const username = document.getElementById("username"); 
+        username.addEventListener("input", function(){
+            console.log(username.value);
+        })
+
+        // Change Event
+        const city = document.getElementById("city"); 
+
+        city.addEventListener("change", function() {
+            console.log(city.value); 
+        }); 
+
+        // Submit Event 
+        const form = document.getElementById("myForm"); 
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            alert("Form Submitted!"); 
+        })
+    </script>
+</body>
+
+</html>
