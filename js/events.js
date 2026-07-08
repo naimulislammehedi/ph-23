@@ -11,3 +11,8 @@ const btnMakeBlue = document.getElementById("btn-make-blue");
 btnMakeBlue.onclick = function makeBLue() {
     document.body.style.backgroundColor = "blue"
 }
+
+const btnMakePurple = document.getElementById("btn-make-purple"); 
+btnMakePurple.onclick = function makePurple() {
+    document.body.style.backgroundColor = "purple"
+}
